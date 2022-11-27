@@ -1,0 +1,851 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/editTextNumber2"
+        android:layout_width="124dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginBottom="4dp"
+        android:ems="10"
+        android:fontFamily="@font/bebas_neue"
+        android:hint="####"
+        android:inputType="number"
+        android:paddingBottom="1dp"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="@+id/teamNumberIV"
+        app:layout_constraintStart_toStartOf="@+id/teamNumberIV" />
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="1024px"
+        android:layout_height="600px"
+        android:contentDescription="TODO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/bkg"/>
+
+    <!--app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="1.00"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="1.00"-->
+
+
+    <ImageView
+        android:id="@+id/fieldImage"
+        android:layout_width="1024px"
+        android:layout_height="600px"
+        android:layout_marginBottom="-50dp"
+        android:contentDescription="TODO"
+        android:scaleX="1.25"
+        android:scaleY="1.25"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_field_png" />
+
+    <ImageButton
+        android:id="@+id/increaseMatchNumber"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="-26dp"
+        android:background="#686868"
+        app:layout_constraintBottom_toBottomOf="@+id/matchNumberIV"
+        app:layout_constraintStart_toEndOf="@+id/matchNumberIV"
+        app:layout_constraintTop_toTopOf="@+id/matchNumberIV"
+        app:srcCompat="@android:drawable/arrow_up_float"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/decreaseMatchNumber"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:background="#686868"
+        app:layout_constraintBottom_toBottomOf="@+id/increaseMatchNumber"
+        app:layout_constraintStart_toEndOf="@+id/increaseMatchNumber"
+        app:srcCompat="@android:drawable/arrow_down_float"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/upperText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="190dp"
+        android:layout_marginBottom="380dp"
+        android:fontFamily="@font/bebas_neue"
+        android:text="@string/upper"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/upperAutonEditText_IN"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:fontFamily="@font/bebas_neue"
+        android:hint="@string/num"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:paddingTop="10dp"
+        android:paddingBottom="1dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#686868"
+        android:textSize="40sp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@+id/upperText"
+        app:layout_constraintTop_toBottomOf="@+id/upperText" />
+
+
+    <EditText
+        android:id="@+id/upperAutonEditText_OUT"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:fontFamily="@font/bebas_neue"
+        android:hint="@string/num"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:paddingTop="10dp"
+        android:paddingBottom="1dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#686868"
+        android:textSize="40sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/upperAutonEditText_IN"
+        app:layout_constraintStart_toStartOf="@+id/upperAutonEditText_IN"
+        app:layout_constraintTop_toBottomOf="@+id/upperAutonEditText_IN" />
+
+    <EditText
+        android:id="@+id/upperTeleopEditText_IN"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:fontFamily="@font/bebas_neue"
+        android:hint="@string/num"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:paddingTop="10dp"
+        android:paddingBottom="1dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#686868"
+        android:textSize="40sp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/upperText"
+        app:layout_constraintTop_toBottomOf="@+id/upperText" />
+
+    <EditText
+        android:id="@+id/upperTeleopEditText_OUT"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:fontFamily="@font/bebas_neue"
+        android:hint="@string/num"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:paddingTop="10dp"
+        android:paddingBottom="1dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#686868"
+        android:textSize="40sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/upperAutonEditText_IN"
+        app:layout_constraintStart_toStartOf="@+id/upperAutonEditText_IN"
+        app:layout_constraintTop_toBottomOf="@+id/upperTeleopEditText_IN" />
+
+    <TextView
+        android:id="@+id/lowerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:fontFamily="@font/bebas_neue"
+        android:text="@string/lower"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="@+id/upperText"
+        app:layout_constraintTop_toBottomOf="@+id/upperText" />
+
+    <EditText
+        android:id="@+id/lowerAutonEditText_IN"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:fontFamily="@font/bebas_neue"
+        android:hint="@string/num"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:paddingBottom="1dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#686868"
+        android:textSize="40sp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@+id/lowerText"
+        app:layout_constraintTop_toBottomOf="@+id/lowerText" />
+
+    <EditText
+        android:id="@+id/lowerAutonEditText_OUT"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:fontFamily="@font/bebas_neue"
+        android:hint="@string/num"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:paddingBottom="1dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#686868"
+        android:textSize="40sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/lowerAutonEditText_IN"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/lowerAutonEditText_IN"
+        app:layout_constraintTop_toBottomOf="@+id/lowerAutonEditText_IN" />
+
+    <EditText
+        android:id="@+id/lowerTeleopEditText_IN"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:fontFamily="@font/bebas_neue"
+        android:hint="@string/num"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:paddingBottom="1dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#686868"
+        android:textSize="40sp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/lowerText"
+        app:layout_constraintTop_toBottomOf="@+id/lowerText" />
+
+    <EditText
+        android:id="@+id/lowerTeleopEditText_OUT"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:fontFamily="@font/bebas_neue"
+        android:hint="@string/num"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:paddingBottom="1dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#686868"
+        android:textSize="40sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/lowerAutonEditText_IN"
+        app:layout_constraintStart_toStartOf="@+id/lowerAutonEditText_IN"
+        app:layout_constraintTop_toBottomOf="@+id/lowerAutonEditText_IN" />
+
+    <TextView
+        android:id="@+id/loadsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="348dp"
+        android:layout_marginTop="356dp"
+        android:fontFamily="@font/bebas_neue"
+        android:text="@string/loads_from"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/groundCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bebas_neue"
+        android:text="@string/ground"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="@+id/loadsText"
+        app:layout_constraintTop_toBottomOf="@+id/loadsText" />
+
+    <CheckBox
+        android:id="@+id/hpCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bebas_neue"
+        android:text="@string/human_player"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="@+id/groundCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/groundCheckBox" />
+
+    <TextView
+        android:id="@+id/tarmacNumText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="228dp"
+        android:layout_marginBottom="328dp"
+        android:fontFamily="@font/bebas_neue"
+        android:text="@string/tarmac"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/tarmacNumEditText"
+        android:layout_width="48dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:fontFamily="@font/bebas_neue"
+        android:hint="@string/num"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:paddingBottom="1dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#686868"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="@+id/tarmacNumText"
+        app:layout_constraintTop_toBottomOf="@+id/tarmacNumText" />
+
+    <CheckBox
+        android:id="@+id/hpShotCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="192dp"
+        android:fontFamily="@font/bebas_neue"
+        android:text="@string/hp_shot"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tarmacNumText" />
+
+    <CheckBox
+        android:id="@+id/leftTarmacCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/bebas_neue"
+        android:gravity="right"
+        android:text="@string/left_tarmac"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="@+id/hpShotCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/hpShotCheckBox" />
+
+    <ImageButton
+        android:id="@+id/tarmacNumberIncrease"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:background="#686868"
+        app:layout_constraintBottom_toBottomOf="@+id/tarmacNumEditText"
+        app:layout_constraintStart_toEndOf="@+id/tarmacNumEditText"
+        app:layout_constraintTop_toTopOf="@+id/tarmacNumEditText"
+        app:srcCompat="@android:drawable/arrow_up_float"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/tarmacNumberDecrease"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:background="#686868"
+        app:layout_constraintBottom_toBottomOf="@+id/tarmacNumberIncrease"
+        app:layout_constraintStart_toEndOf="@+id/tarmacNumberIncrease"
+        app:srcCompat="@android:drawable/arrow_down_float"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/autonButton"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginBottom="456dp"
+        android:background="@null"
+        android:cropToPadding="true"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/auton_0" />
+
+    <ImageButton
+        android:id="@+id/teleOPButton"
+        android:layout_width="137dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:background="@null"
+        android:cropToPadding="true"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/autonButton"
+        app:layout_constraintStart_toEndOf="@+id/autonButton"
+        app:srcCompat="@drawable/teleop_0" />
+
+    <ImageButton
+        android:id="@+id/endgameButton"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/teleOPButton"
+        app:layout_constraintStart_toEndOf="@+id/teleOPButton"
+        app:srcCompat="@drawable/endgame_0" />
+
+    <ImageButton
+        android:id="@+id/qrCodeButton"
+        android:layout_width="143dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:background="@null"
+        android:cropToPadding="true"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/endgameButton"
+        app:layout_constraintStart_toEndOf="@+id/endgameButton"
+        app:srcCompat="@drawable/qrcode_0" />
+
+    <ImageView
+        android:id="@+id/teamNumberIV"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginBottom="4dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/team_n" />
+
+    <ImageView
+        android:id="@+id/matchNumberIV"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/teamNumberIV"
+        app:layout_constraintStart_toEndOf="@+id/teamNumberIV"
+        app:srcCompat="@drawable/match_n" />
+
+    <EditText
+        android:id="@+id/teamNumberEditText"
+        android:layout_width="143dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginBottom="4dp"
+        android:ems="10"
+        android:fontFamily="@font/bebas_neue"
+        android:hint="####"
+        android:inputType="number"
+        android:paddingBottom="1dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#686868"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="@+id/teamNumberIV"
+        app:layout_constraintStart_toStartOf="@+id/teamNumberIV" />
+
+    <EditText
+        android:id="@+id/matchNumberEditText"
+        android:layout_width="138dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginBottom="4dp"
+        android:ems="10"
+        android:fontFamily="@font/bebas_neue"
+        android:hint="##"
+        android:inputType="number"
+        android:paddingBottom="1dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#686868"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="@+id/teamNumberIV"
+        app:layout_constraintStart_toEndOf="@+id/teamNumberIV" />
+
+    <RadioGroup
+        android:id="@+id/hangarButtons"
+        android:layout_width="100dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="700dp"
+        android:layout_marginBottom="108dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/traversal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bebas_neue"
+            android:text="Trav"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp"
+            app:layout_constraintStart_toStartOf="@+id/hangarButtons"
+            app:layout_constraintTop_toTopOf="@+id/hangarButtons" />
+
+        <RadioButton
+            android:id="@+id/high"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bebas_neue"
+            android:text="High"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp"
+            app:layout_constraintStart_toStartOf="@+id/hangarButtons"
+            app:layout_constraintTop_toTopOf="@+id/traversal" />
+
+        <RadioButton
+            android:id="@+id/mid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bebas_neue"
+            android:text="Mid"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp"
+            app:layout_constraintStart_toStartOf="@+id/hangarButtons"
+            app:layout_constraintTop_toTopOf="@+id/mid" />
+
+        <RadioButton
+            android:id="@+id/low"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bebas_neue"
+            android:text="Low"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp"
+            app:layout_constraintStart_toStartOf="@+id/hangarButtons"
+            app:layout_constraintTop_toTopOf="@+id/low" />
+
+        <RadioButton
+            android:id="@+id/none"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bebas_neue"
+            android:text="None"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp"
+            app:layout_constraintStart_toStartOf="@+id/hangarButtons"
+            app:layout_constraintTop_toTopOf="@+id/none" />
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/qrCodeIV"
+        android:layout_width="295dp"
+        android:layout_height="268dp"
+        android:layout_marginStart="648dp"
+        android:layout_marginBottom="120dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <EditText
+        android:id="@+id/comments"
+        android:layout_width="383dp"
+        android:layout_height="253dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginBottom="132dp"
+        android:background="#2A2A2A"
+        android:ems="10"
+        android:fontFamily="@font/montserrat"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:padding="20dp"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/commentsTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bebas_neue"
+        android:text="Comments:"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/comments"
+        app:layout_constraintStart_toStartOf="@+id/comments" />
+
+    <Button
+        android:id="@+id/generateQr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bebas_neue"
+        android:text="Generate \nQR Code"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:backgroundTint="#2A2A2A"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/qrCodeIV"
+        app:layout_constraintEnd_toStartOf="@+id/qrCodeIV"
+        app:layout_constraintStart_toEndOf="@+id/comments"
+        app:layout_constraintTop_toTopOf="@+id/qrCodeIV"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <Button
+        android:id="@+id/nextMatch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bebas_neue"
+        android:text="Next \nMatch"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:backgroundTint="#2A2A2A"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/qrCodeIV"
+        app:layout_constraintEnd_toStartOf="@+id/qrCodeIV"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toEndOf="@+id/comments"
+        app:layout_constraintTop_toTopOf="@+id/qrCodeIV"
+        app:layout_constraintVertical_bias="0.755" />
+
+    <TextView
+        android:id="@+id/climberTimeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/bebas_neue"
+        android:text="CLIMB TIMER:"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/comments"
+        app:layout_constraintEnd_toStartOf="@+id/timerChronometer"
+        app:layout_constraintStart_toEndOf="@+id/upperText"
+        app:layout_constraintTop_toBottomOf="@+id/teleOPButton"
+        />
+
+    <ImageButton
+        android:id="@+id/startTimer"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/climberTimeText"
+        app:layout_constraintStart_toEndOf="@+id/timerChronometer"
+        app:layout_constraintTop_toTopOf="@+id/climberTimeText"
+        app:layout_constraintVertical_bias="0.538"
+        app:srcCompat="@android:drawable/ic_media_play"
+        android:visibility="visible"/>
+
+    <ImageButton
+        android:id="@+id/stopTimer"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#00FFFFFF"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/startTimer"
+        app:layout_constraintStart_toStartOf="@+id/startTimer"
+        app:srcCompat="@android:drawable/ic_media_pause" />
+
+    <ImageButton
+        android:id="@+id/resetTimer"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/startTimer"
+        app:layout_constraintStart_toEndOf="@+id/stopTimer"
+        app:layout_constraintTop_toTopOf="@+id/startTimer"
+        android:layout_marginLeft="10dp"
+        app:srcCompat="@android:drawable/ic_menu_delete"
+        android:onClick="resetChronometer"
+        />
+
+    <Chronometer
+        android:id="@+id/timerChronometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/bebas_neue"
+        android:text="00:00"
+        android:textColor="#B8B8B8"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="@+id/climberTimeText"
+        app:layout_constraintStart_toEndOf="@+id/climberTimeText"
+        app:layout_constraintTop_toTopOf="@+id/climberTimeText"
+       />
+
+
+    <ImageButton
+        android:id="@+id/upperAutonPlus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#515151"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/upperAutonEditText_IN"
+        app:layout_constraintStart_toEndOf="@+id/upperAutonEditText_IN"
+        app:layout_constraintTop_toTopOf="@+id/upperAutonEditText_IN"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+    <ImageButton
+        android:id="@+id/upperTeleopPlus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#515151"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/upperAutonEditText_IN"
+        app:layout_constraintStart_toEndOf="@+id/upperAutonEditText_IN"
+        app:layout_constraintTop_toTopOf="@+id/upperAutonEditText_IN"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+    <ImageButton
+        android:id="@+id/lowerAutonPlus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#515151"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/lowerAutonEditText_IN"
+        app:layout_constraintStart_toEndOf="@+id/lowerAutonEditText_IN"
+        app:layout_constraintTop_toTopOf="@+id/lowerAutonEditText_IN"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+
+    <ImageButton
+        android:id="@+id/lowerTeleopPlus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#515151"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/lowerAutonEditText_IN"
+        app:layout_constraintStart_toEndOf="@+id/lowerAutonEditText_IN"
+        app:layout_constraintTop_toTopOf="@+id/lowerAutonEditText_IN"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+    <ImageButton
+        android:id="@+id/upperAutonX"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#515151"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/upperAutonEditText_OUT"
+        app:layout_constraintStart_toEndOf="@+id/upperAutonEditText_OUT"
+        app:layout_constraintTop_toTopOf="@+id/upperAutonEditText_OUT"
+        app:srcCompat="@android:drawable/ic_delete" />
+    <ImageButton
+        android:id="@+id/upperTeleopX"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#515151"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/upperAutonEditText_OUT"
+        app:layout_constraintStart_toEndOf="@+id/upperAutonEditText_OUT"
+        app:layout_constraintTop_toTopOf="@+id/upperAutonEditText_OUT"
+        app:srcCompat="@android:drawable/ic_delete" />
+    <ImageButton
+        android:id="@+id/lowerAutonX"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#515151"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/lowerAutonEditText_OUT"
+        app:layout_constraintStart_toEndOf="@+id/lowerAutonEditText_OUT"
+        app:layout_constraintTop_toTopOf="@+id/lowerAutonEditText_OUT"
+        app:srcCompat="@android:drawable/ic_delete" />
+    <ImageButton
+        android:id="@+id/lowerTeleopX"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#515151"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/lowerAutonEditText_OUT"
+        app:layout_constraintStart_toEndOf="@+id/lowerAutonEditText_OUT"
+        app:layout_constraintTop_toTopOf="@+id/lowerAutonEditText_OUT"
+        app:srcCompat="@android:drawable/ic_delete" />
+
+
+
+    <ImageButton
+        android:id="@+id/upperAutonPlusDel"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#515151"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/upperAutonPlus"
+        app:layout_constraintStart_toEndOf="@+id/upperAutonPlus"
+        app:layout_constraintTop_toTopOf="@+id/upperAutonPlus"
+        app:srcCompat="@android:drawable/ic_input_delete" />
+    <ImageButton
+        android:id="@+id/upperTeleopPlusDel"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#515151"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/upperTeleopPlus"
+        app:layout_constraintStart_toEndOf="@+id/upperTeleopPlus"
+        app:layout_constraintTop_toTopOf="@+id/upperTeleopPlus"
+        app:srcCompat="@android:drawable/ic_input_delete" />
+    <ImageButton
+        android:id="@+id/lowerAutonPlusDel"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#515151"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/lowerAutonPlus"
+        app:layout_constraintStart_toEndOf="@+id/lowerAutonPlus"
+        app:layout_constraintTop_toTopOf="@+id/lowerAutonPlus"
+        app:srcCompat="@android:drawable/ic_input_delete" />
+
+    <ImageButton
+        android:id="@+id/lowerTeleopPlusDel"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#515151"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/lowerTeleopPlus"
+        app:layout_constraintStart_toEndOf="@+id/lowerTeleopPlus"
+        app:layout_constraintTop_toTopOf="@+id/lowerTeleopPlus"
+        app:srcCompat="@android:drawable/ic_input_delete" />
+
+
+    <ImageButton
+        android:id="@+id/upperAutonXDel"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#515151"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/upperAutonX"
+        app:layout_constraintStart_toEndOf="@+id/upperAutonX"
+        app:layout_constraintTop_toTopOf="@+id/upperAutonX"
+        app:srcCompat="@android:drawable/ic_input_delete" />
+    <ImageButton
+        android:id="@+id/upperTeleopXDel"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#515151"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/upperTeleopX"
+        app:layout_constraintStart_toEndOf="@+id/upperTeleopX"
+        app:layout_constraintTop_toTopOf="@+id/upperTeleopX"
+        app:srcCompat="@android:drawable/ic_input_delete" />
+    <ImageButton
+        android:id="@+id/lowerAutonXDel"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#515151"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/lowerAutonX"
+        app:layout_constraintStart_toEndOf="@+id/lowerAutonX"
+        app:layout_constraintTop_toTopOf="@+id/lowerAutonX"
+        app:srcCompat="@android:drawable/ic_input_delete" />
+    <ImageButton
+        android:id="@+id/lowerTeleopXDel"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#515151"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/lowerTeleopX"
+        app:layout_constraintStart_toEndOf="@+id/lowerTeleopX"
+        app:layout_constraintTop_toTopOf="@+id/lowerTeleopX"
+        app:srcCompat="@android:drawable/ic_input_delete" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

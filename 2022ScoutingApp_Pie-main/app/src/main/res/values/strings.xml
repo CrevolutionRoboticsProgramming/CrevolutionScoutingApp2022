@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">ScoutingApp2022_Pie</string>
+    <string name="auton">Auton</string>
+    <string name="tele_op">Tele-Op</string>
+    <string name="endgame">Endgame</string>
+    <string name="penalties">Penalties</string>
+    <string name="trav">TRAV</string>
+    <string name="high">HIGH</string>
+    <string name="low">LOW</string>
+    <string name="n_a">N/A</string>
+    <string name="mid">MID</string>
+    <string name="upper">UPPER:</string>
+    <string name="lower">LOWER:</string>
+    <string name="loads_from">LOADS FROM:</string>
+    <string name="ground">GROUND</string>
+    <string name="human_player">HUMAN PLAYER</string>
+    <string name="tarmac">TARMAC #:</string>
+    <string name="hp_shot">HP SHOT</string>
+    <string name="left_tarmac">LEFT \nTARMAC</string>
+    <string name="num">#</string>
+</resources>

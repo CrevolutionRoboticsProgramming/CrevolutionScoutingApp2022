@@ -1,5 +1,5 @@
 # 2022ScoutingApp_Pie
-Crevolution Scouting APP V2.0. This one is upgraded to a newer OS (ANDROID 11 GO) and is to be utilized for LENOVO tablets. This app is dedicated to all the Crevolution team members, mentors, and alumnis, who drive the team forward!
+Crevolution Scouting APP V2.0. This one is upgraded to a newer OS (ANDROID 11 GO) and is to be utilized for LENOVO 7-in tablets. This app is dedicated to all the Crevolution team members, mentors, and alumnis, who drive the team forward!
 
 
 TODO: 
